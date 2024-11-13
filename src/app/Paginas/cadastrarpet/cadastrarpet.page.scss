@@ -1,0 +1,67 @@
+.register-pet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 20px;
+}
+
+.register-pet-container img {
+    margin-bottom: 20px;
+}
+
+.register-pet-title {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.register-pet-item {
+  width: 100%;
+  --background: var(--background-color);
+  --inner-border-width: 0px;
+  --border-color: transparent;
+  margin-bottom: 10px;
+}
+
+.register-pet-label {
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.register-pet-input {
+  width: 100%;
+  background: var(--gray-color);
+  color: var(--black-color);
+  border-radius: 8px;
+  padding-left: 10px !important;
+}
+
+.register-pet-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px var(--gray-color);
+  margin-top: 10px;
+}
+
+.register-pet-button:hover {
+  --background: var(--primary-color);
+}
+
+.cancel-button {
+  margin-top: 10px;
+  height: 50px;
+  font-size: 18px;
+  --color: var(--black-color);
+  --background: var(--gray-color);
+}
+
+.cancel-button:hover {
+  --background: var(--secondary-color);
+}

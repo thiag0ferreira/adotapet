@@ -1,0 +1,27 @@
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet" class="logo">
+
+    <h1 class="login-title"><strong>LOGIN</strong></h1>
+
+    <ion-item class="login-item">
+      <ion-label class="login-label" position="stacked"><b>Email</b></ion-label>
+      <ion-input class="login-input" type="email" [(ngModel)]="email" placeholder="Insira seu endereço de email" required></ion-input>
+    </ion-item>
+
+    <ion-item class="login-item">
+      <ion-label class="login-label" position="stacked"><b>Senha</b></ion-label>
+      <ion-input class="login-input" type="password" [(ngModel)]="password" placeholder="Insira sua senha" required></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button class="login-button" expand="block" (click)="login()"><strong>Entrar</strong></ion-button>
+    </div>
+
+    <a class="forgot-password" href="#">Esqueceu sua senha?</a>
+
+    <div class="signup-text">
+      Ainda não tem conta? <a href="/cadastrar"><b>Faça seu cadastro!</b></a>
+    </div>
+  </div>
+</ion-content>

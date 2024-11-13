@@ -1,0 +1,60 @@
+<ion-content class="ion-padding">
+  <div class="welcome-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet"class="logo">
+
+    <h1 class="welcome-title"><strong>🐾 Bem-vindo ao Cãonect! 🐾</strong></h1>
+
+    <div class="intro">
+      <p>Aqui, a felicidade tem quatro patas e um coração cheio de amor para dar!
+        No Cãonect, você pode encontrar seu novo melhor amigo de forma simples e segura.
+        Navegue pelo nosso aplicativo para descobrir cães e gatos que estão ansiosamente esperando por um lar.</p>
+    </div>
+
+    <div class="register-pet-button">
+      <ion-button class="register-pet-button" expand="block" (click)="cadastrar()"><strong>CADASTRAR PET</strong></ion-button>
+    </div>
+
+
+
+    <h2 class="testimonials-title"><strong>Depoimentos</strong></h2>
+
+    <div class="testimonial">
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+      <p><strong>Maria, 40 anos, Recife/PE.</strong></p>
+    </div>
+
+    <div class="testimonial">
+      <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores.</p>
+      <p><strong>Paulo, 40 anos, Gravatá/PE.</strong></p>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <ion-footer class="footer">
+    <ion-toolbar class="footer-toolbar">
+      <ion-tabs>
+        <ion-tab-bar slot="bottom" class="footer-tab-bar">
+          <ion-tab-button tab="inicio" (click)="bemvindo()">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Início</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="consultas" (click)="adocoes()">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Consultas</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="explorar" (click)="buscar()">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Adotar</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="perfil"  (click)="perfil()">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

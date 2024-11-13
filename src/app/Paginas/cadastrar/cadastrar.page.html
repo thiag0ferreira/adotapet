@@ -1,0 +1,40 @@
+<ion-content class="ion-padding">
+  <div class="signup-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet" class="logo">
+
+    <h1 class="signup-title"><strong>CADASTRO</strong></h1>
+
+    <ion-item class="signup-item">
+      <ion-label class="signup-label" position="stacked"><b>Nome</b></ion-label>
+      <ion-input class="signup-input" type="text" [(ngModel)]="nome" placeholder="Digite seu nome completo"
+                 required></ion-input>
+    </ion-item>
+
+    <ion-item class="signup-item">
+      <ion-label class="signup-label" position="stacked"><b>Email</b></ion-label>
+      <ion-input class="signup-input" type="email" [(ngModel)]="email" placeholder="Insira seu endereço de email"
+                 required></ion-input>
+    </ion-item>
+
+    <ion-item class="signup-item">
+      <ion-label class="signup-label" position="stacked"><b>Crie uma senha</b></ion-label>
+      <ion-input class="signup-input" type="password" [(ngModel)]="senha" placeholder="Insira sua senha"
+                 required></ion-input>
+    </ion-item>
+
+    <ion-item class="signup-item">
+      <ion-label class="signup-label" position="stacked"><b>Repita a senha</b></ion-label>
+      <ion-input class="signup-input" type="password" [(ngModel)]="confirmarSenha" placeholder="Insira sua senha"
+                 required></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button class="signup-button" expand="block" (click)="registrar()"><strong>Avançar</strong></ion-button>
+    </div>
+
+    <div class="button-container">
+      <ion-button class="signup-button" expand="block" (click)="cancelar()"><strong>Cancelar</strong></ion-button>
+    </div>
+  </div>
+</ion-content>
+

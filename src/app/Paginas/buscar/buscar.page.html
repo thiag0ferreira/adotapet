@@ -1,0 +1,58 @@
+<ion-content class="ion-padding">
+  <div class="search-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet" class="logo">
+
+    <div class="search-box">
+      <ion-item class="search-item">
+        <ion-label position="floating">Nome do Pet</ion-label>
+        <ion-input class="search-input" [(ngModel)]="searchTerm" type="text" placeholder="Busque por nome"></ion-input>
+      </ion-item>
+      <ion-item class="search-item">
+        <ion-label position="floating">Localização</ion-label>
+        <ion-input class="search-input" [(ngModel)]="searchLocation" type="text" placeholder="Digite sua localização"></ion-input>
+      </ion-item>
+      <ion-button class="search-button" expand="block" (click)="searchPets()"><strong>Buscar</strong></ion-button>
+    </div>
+
+    <h2 class="results-title"><strong>Resultado da busca</strong></h2>
+
+    <div class="results-container">
+      <div *ngFor="let pet of pets" class="pet-card">
+        <img [src]="pet.foto" alt="Foto do Pet" class="profile-image">
+        <div class="pet-info">
+          <h2>{{ pet.nome }}</h2>
+          <p>{{ pet.especie }}</p>
+          <ion-button class="search-button" (click)="solicitarAdocao(pet._id)">Solicitar Adoção</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-footer class="footer">
+    <ion-toolbar class="footer-toolbar">
+      <ion-tabs>
+        <ion-tab-bar slot="bottom" class="footer-tab-bar">
+          <ion-tab-button tab="inicio" (click)="bemvindo()">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Início</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="consultas" (click)="adocoes()">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Consultas</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="explorar" (click)="buscar()">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Adotar</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="perfil"  (click)="perfil()">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

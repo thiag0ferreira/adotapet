@@ -1,0 +1,131 @@
+.adoptions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.adoptions-title {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+
+.schedule-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.schedule-button:hover {
+  --background: var(--primary-color);
+}
+
+.section-title {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin: 20px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.adoption-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.adoption-info {
+  flex-grow: 1;
+  text-align: left;
+  color: var(--black-color);
+}
+
+.adoption-info h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.adoption-info p {
+  margin: 0 0 5px;
+}
+
+.cancel-button {
+  --background: var(--danger-color);
+  --color: var(--background-color);
+  font-weight: bold;
+  height: 40px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px var(--third-color);
+}
+
+.cancel-button:hover {
+  --background: var(--primary-color);
+}
+
+.adopted-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 40px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px var(--primary-color);
+}
+
+.adopted-button:hover {
+  --background: var(--primary-color);
+}
+
+/* Estilos do rodapé */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-toolbar {
+  --background: var(--primary-color);
+  --color: var(--background-color);
+  padding: 0;
+}
+
+.footer-tab-bar {
+  --background: var(--primary-color);
+  --color: var(--background-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-tab-bar ion-tab-button {
+  --color: var(--background-color);
+}
+
+.footer-tab-bar ion-tab-button:hover ion-icon,
+.footer-tab-bar ion-tab-button:hover ion-label {
+  color: var(--third-color);
+}

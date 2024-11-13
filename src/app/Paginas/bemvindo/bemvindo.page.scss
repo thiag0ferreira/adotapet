@@ -1,0 +1,142 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 20px;
+  padding-bottom: 40px;
+
+}
+
+.logo {
+
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.intro{
+  background: var(--gray-color);
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 20px;
+}
+
+.search-item {
+  width: 100%;
+  --background: var(--primary-color);
+  --inner-border-width: 0px;
+  --border-color: transparent;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 100%;
+  background: var(--background-color);
+  color: var(--black-color);
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.search-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px var(--primary-color);
+  margin-top: 10px;
+}
+
+.search-button:hover {
+  --background: var(--primary-color);
+}
+
+.register-pet-button {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-pet-button ion-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+
+}
+
+.register-pet-button ion-button:hover {
+  --background: var(--primary-color);
+}
+
+.testimonials-title {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background: var(--gray-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.testimonial p {
+  margin: 0 0 10px;
+  color: var(--black-color);
+}
+
+
+
+
+/* Estilos do rodapé */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+
+}
+
+.footer-toolbar {
+  --background: var(--primary-color);
+  --color: var(--background-color);
+  padding: 0;
+}
+
+.footer-tab-bar {
+
+  --background: var(--primary-color);
+  --color: var(--background-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-tab-bar ion-tab-button {
+  --color: var(--background-color);
+}
+
+.footer-tab-bar ion-tab-button:hover ion-icon,
+.footer-tab-bar ion-tab-button:hover ion-label {
+  color: var(--third-color);
+}

@@ -1,0 +1,58 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.signup-title {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.signup-item {
+  width: 100%;
+  --background: var(--background-color);
+  --inner-border-width: 0px; /* Remove a linha inferior */
+  --border-color: transparent;
+}
+
+.signup-item .item-native {
+  border-bottom: none !important; /* Remove a linha inferior do ion-item */
+}
+
+.signup-label {
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.signup-input {
+  width: 100%;
+  background: var(--gray-color);
+  color: var(--black-color);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  padding-left: 10px !important;
+}
+
+.button-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px var(--gray-color);
+}
+
+.signup-button:hover {
+  --background: var(--primary-color);
+}

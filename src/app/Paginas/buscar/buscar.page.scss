@@ -1,0 +1,120 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.logo {
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  background: var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.search-item {
+  width: 100%;
+  --background: var(--primary-color);
+  --inner-border-width: 0px;
+  --border-color: transparent;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100%;
+  background: var(--background-color);
+  color: var(--black-color);
+  border-radius: 8px;
+  padding-left: 10px !important;
+}
+
+.search-button {
+  --background: var(--secondary-color);
+  --color: var(--black-color);
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.search-button:hover {
+  --background: var(--primary-color);
+}
+
+.results-title {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  border-radius: 8px;
+  margin: 10px;
+  width: calc(50% - 20px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.pet-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-toolbar {
+  --background: var(--primary-color);
+  --color: var(--background-color);
+  padding: 0;
+}
+
+.footer-tab-bar {
+  --background: var(--primary-color);
+  --color: var(--background-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-tab-bar ion-tab-button {
+  --color: var(--background-color);
+}
+
+.footer-tab-bar ion-tab-button:hover ion-icon,
+.footer-tab-bar ion-tab-button:hover ion-label {
+  color: var(--third-color);
+}

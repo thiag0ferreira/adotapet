@@ -1,0 +1,97 @@
+<ion-content class="ion-padding">
+  <div class="detalhes-pet-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet">
+
+    <h1 class="detalhes-pet-title"><strong>Detalhes do Pet</strong></h1>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Foto do Pet</b></ion-label>
+      <img [src]="pet.foto" alt="Foto do pet" class="pet-image"/>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Nome do Pet</b></ion-label>
+      <ion-input [(ngModel)]="pet.nome" class="detalhes-pet-input" type="text" disabled></ion-input>
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Localização</b></ion-label>
+      <ion-input [(ngModel)]="pet.localizacao" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Espécie</b></ion-label>
+      <ion-input [(ngModel)]="pet.especie" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Idade Estimada</b></ion-label>
+      <ion-input [(ngModel)]="pet.idadeEstimada" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Peso Estimado</b></ion-label>
+      <ion-input [(ngModel)]="pet.peso" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Porte</b></ion-label>
+      <ion-input [(ngModel)]="pet.porte" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Raça</b></ion-label>
+      <ion-input [(ngModel)]="pet.raca" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Sexo</b></ion-label>
+      <ion-input [(ngModel)]="pet.sexo" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item" *ngIf="pet.cor">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Cor</b></ion-label>
+      <ion-input [(ngModel)]="pet.cor" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item" *ngIf="pet.tipoPelo">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Tipo de Pelo</b></ion-label>
+      <ion-input [(ngModel)]="pet.tipoPelo" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Necessidades Especiais</b></ion-label>
+      <ion-input [(ngModel)]="pet.necessidadesEspeciais" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="pet.necessidadesEspeciais" class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Descreva as Necessidades Especiais</b></ion-label>
+      <ion-textarea [(ngModel)]="pet.descricaoNecessidades" class="detalhes-pet-input" disabled></ion-textarea>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Castrado</b></ion-label>
+      <ion-input [(ngModel)]="pet.castrado" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Vermifugado</b></ion-label>
+      <ion-input [(ngModel)]="pet.vermifugado" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Pedigree</b></ion-label>
+      <ion-input [(ngModel)]="pet.pedigree" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Vacinado</b></ion-label>
+      <ion-input [(ngModel)]="pet.vacinado" class="detalhes-pet-input" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="detalhes-pet-item">
+      <ion-label class="detalhes-pet-label" position="stacked"><b>Sobre o Pet</b></ion-label>
+      <ion-textarea [(ngModel)]="pet.sobrePet" class="detalhes-pet-input" disabled></ion-textarea>
+    </ion-item>
+
+    <ion-button class="action-button" expand="block" (click)="confirmarAdocao()"><strong>Confirmar</strong></ion-button>
+    <ion-button class="cancel-button" expand="block" color="medium" (click)="cancelarAdocao()"><strong>Cancelar</strong></ion-button>
+  </div>
+</ion-content>

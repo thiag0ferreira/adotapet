@@ -1,0 +1,165 @@
+<ion-content class="ion-padding">
+  <div class="register-pet-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet">
+
+    <h1 class="register-pet-title"><strong>Cadastro de Pet</strong></h1>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Foto do Pet</b></ion-label>
+      <input type="file" accept="image/*" (change)="onFileSelected($event)"/>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Nome do Pet</b></ion-label>
+      <ion-input [(ngModel)]="petData.nome" class="register-pet-input" type="text" placeholder="Digite o nome" required></ion-input>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Localização</b></ion-label>
+      <ion-input [(ngModel)]="petData.localizacao" class="register-pet-input" type="text" placeholder="Insira seu endereço" required></ion-input>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Espécie</b></ion-label>
+      <ion-select [(ngModel)]="petData.especie" class="register-pet-input" placeholder="Escolha a espécie" required>
+        <ion-select-option value="Gato">Gato</ion-select-option>
+        <ion-select-option value="Cachorro">Cachorro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Idade estimada</b></ion-label>
+      <ion-select [(ngModel)]="petData.idadeEstimada" class="register-pet-input" placeholder="Escolha a idade estimada" required>
+        <ion-select-option *ngFor="let age of ages" [value]="age">{{ age }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Peso estimado</b></ion-label>
+      <ion-select [(ngModel)]="petData.peso" class="register-pet-input" placeholder="Escolha o peso" required>
+        <ion-select-option *ngFor="let w of weight" [value]="w">{{ w }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Porte</b></ion-label>
+      <ion-select [(ngModel)]="petData.porte" class="register-pet-input" placeholder="Escolha o porte" required>
+        <ion-select-option value="Mini">Mini</ion-select-option>
+        <ion-select-option value="Pequeno">Pequeno</ion-select-option>
+        <ion-select-option value="Médio">Médio</ion-select-option>
+        <ion-select-option value="Grande">Grande</ion-select-option>
+        <ion-select-option value="Gigante">Gigante</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Raça</b></ion-label>
+      <ion-select [(ngModel)]="petData.raca" class="register-pet-input" placeholder="Insira a raça do pet" required>
+        <ion-select-option value="SRD">SRD (Sem raça definida)</ion-select-option>
+        <ion-select-option value="Akita">Akita</ion-select-option>
+        <ion-select-option value="Basset hound">Basset hound</ion-select-option>
+        <ion-select-option value="Beagle">Beagle</ion-select-option>
+        <ion-select-option value="Bichon frisé">Bichon frisé</ion-select-option>
+        <ion-select-option value="Boiadeiro australiano">Boiadeiro australiano</ion-select-option>
+        <ion-select-option value="Border collie">Border collie</ion-select-option>
+        <ion-select-option value="Boston terrier">Boston terrier</ion-select-option>
+        <ion-select-option value="Boxer">Boxer</ion-select-option>
+        <ion-select-option value="Buldogue francês">Buldogue francês</ion-select-option>
+        <ion-select-option value="Buldogue inglês">Buldogue inglês</ion-select-option>
+        <ion-select-option value="Bull terrier">Bull terrier</ion-select-option>
+        <ion-select-option value="Cane corso">Cane corso</ion-select-option>
+        <ion-select-option value="Cavalier king charles spaniel">Cavalier king charles spaniel</ion-select-option>
+        <ion-select-option value="Chihuahua">Chihuahua</ion-select-option>
+        <ion-select-option value="Chow chow">Chow chow</ion-select-option>
+        <ion-select-option value="Cocker spaniel inglês">Cocker spaniel inglês</ion-select-option>
+        <ion-select-option value="Dachshund">Dachshund</ion-select-option>
+        <ion-select-option value="Dálmata">Dálmata</ion-select-option>
+        <ion-select-option value="Doberman">Doberman</ion-select-option>
+        <ion-select-option value="Dogo argentino">Dogo argentino</ion-select-option>
+        <ion-select-option value="Dogue alemão">Dogue alemão</ion-select-option>
+        <ion-select-option value="Fila brasileiro">Fila brasileiro</ion-select-option>
+        <ion-select-option value="Golden retriever">Golden retriever</ion-select-option>
+        <ion-select-option value="Husky siberiano">Husky siberiano</ion-select-option>
+        <ion-select-option value="Jack russell terrier">Jack russell terrier</ion-select-option>
+        <ion-select-option value="Labrador retriever">Labrador retriever</ion-select-option>
+        <ion-select-option value="Lhasa apso">Lhasa apso</ion-select-option>
+        <ion-select-option value="Lulu da pomerânia">Lulu da pomerânia</ion-select-option>
+        <ion-select-option value="Maltês">Maltês</ion-select-option>
+        <ion-select-option value="Mastiff inglês">Mastiff inglês</ion-select-option>
+        <ion-select-option value="Mastim tibetano">Mastim tibetano</ion-select-option>
+        <ion-select-option value="Pastor alemão">Pastor alemão</ion-select-option>
+        <ion-select-option value="Pastor australiano">Pastor australiano</ion-select-option>
+        <ion-select-option value="Pastor de Shetland">Pastor de Shetland</ion-select-option>
+        <ion-select-option value="Pequinês">Pequinês</ion-select-option>
+        <ion-select-option value="Pinscher">Pinscher</ion-select-option>
+        <ion-select-option value="Pit bull">Pit bull</ion-select-option>
+        <ion-select-option value="Poodle">Poodle</ion-select-option>
+        <ion-select-option value="Pug">Pug</ion-select-option>
+        <ion-select-option value="Rottweiler">Rottweiler</ion-select-option>
+        <ion-select-option value="Schnauzer">Schnauzer</ion-select-option>
+        <ion-select-option value="Shar-pei">Shar-pei</ion-select-option>
+        <ion-select-option value="Shiba">Shiba</ion-select-option>
+        <ion-select-option value="Shih tzu">Shih tzu</ion-select-option>
+        <ion-select-option value="Staffordshire bull terrier">Staffordshire bull terrier</ion-select-option>
+        <ion-select-option value="Weimaraner">Weimaraner</ion-select-option>
+        <ion-select-option value="Yorkshire terrier">Yorkshire terrier</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Sexo</b></ion-label>
+      <ion-select [(ngModel)]="petData.sexo" class="register-pet-input" placeholder="Escolha o sexo" required>
+        <ion-select-option value="Macho">Macho</ion-select-option>
+        <ion-select-option value="Fêmea">Fêmea</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Cor</b></ion-label>
+      <ion-input [(ngModel)]="petData.cor" class="register-pet-input" type="text" placeholder="Insira a cor do pet"></ion-input>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Tipo de Pelo</b></ion-label>
+      <ion-input [(ngModel)]="petData.tipoPelo" class="register-pet-input" type="text" placeholder="Tipo de Pelo"></ion-input>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Necessidades Especiais</b></ion-label>
+      <ion-toggle [(ngModel)]="petData.necessidadesEspeciais"></ion-toggle>
+    </ion-item>
+
+    <ion-item *ngIf="petData.necessidadesEspeciais" class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Descreva as Necessidades Especiais</b></ion-label>
+      <ion-textarea [(ngModel)]="petData.descricaoNecessidades" class="register-pet-input" maxlength="100" placeholder="Descreva as necessidades especiais"></ion-textarea>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Castrado</b></ion-label>
+      <ion-toggle [(ngModel)]="petData.castrado"></ion-toggle>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Vermifugado</b></ion-label>
+      <ion-toggle [(ngModel)]="petData.vermifugado"></ion-toggle>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Pedigree</b></ion-label>
+      <ion-toggle [(ngModel)]="petData.pedigree"></ion-toggle>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Vacinado</b></ion-label>
+      <ion-toggle [(ngModel)]="petData.vacinado"></ion-toggle>
+    </ion-item>
+
+    <ion-item class="register-pet-item">
+      <ion-label class="register-pet-label" position="stacked"><b>Sobre o Pet</b></ion-label>
+      <ion-textarea [(ngModel)]="petData.sobrePet" class="register-pet-input" maxlength="150" placeholder="Conte um pouco mais sobre o pet" required></ion-textarea>
+    </ion-item>
+
+    <ion-button class="register-pet-button" expand="block" (click)="registerPet()"><strong>Cadastrar Pet</strong></ion-button>
+    <ion-button class="cancel-button" expand="block" color="medium" (click)="cancelar()"><strong>Cancelar</strong></ion-button>
+  </div>
+</ion-content>

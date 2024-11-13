@@ -1,0 +1,42 @@
+<ion-content class="ion-padding">
+  <div class="personal-info-container">
+    <img src="./assets/icon/adotapet.png" alt="AdotaPet" class="logo">
+
+    <h1 class="personal-info-title"><strong>INFORMAÇÕES PESSOAIS</strong></h1>
+
+    <ion-item class="personal-info-item">
+      <ion-label class="personal-info-label" position="stacked"><b>CEP</b></ion-label>
+      <ion-input class="personal-info-input" type="text" [(ngModel)]="cep" placeholder="Insira seu CEP" required></ion-input>
+    </ion-item>
+
+    <ion-item class="personal-info-item">
+      <ion-label class="personal-info-label" position="stacked"><b>Endereço</b></ion-label>
+      <ion-input class="personal-info-input" type="text" [(ngModel)]="endereco" placeholder="Insira seu endereço" required></ion-input>
+    </ion-item>
+
+    <ion-item class="personal-info-item">
+      <ion-label class="personal-info-label" position="stacked"><b>Número</b></ion-label>
+      <ion-input class="personal-info-input" type="text" [(ngModel)]="numero" placeholder="Insira seu número" required></ion-input>
+    </ion-item>
+
+    <ion-item class="personal-info-item">
+      <ion-label class="personal-info-label" position="stacked"><b>Complemento</b></ion-label>
+      <ion-input class="personal-info-input" type="text" [(ngModel)]="complemento" placeholder="Insira seu complemento"></ion-input>
+    </ion-item>
+
+    <ion-item class="personal-info-item">
+      <ion-label class="personal-info-label" position="stacked"><b>Telefone</b></ion-label>
+      <ion-input class="personal-info-input" type="tel" [(ngModel)]="telefone" placeholder="(00) 00000-0000" required></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button class="back-button" expand="block" (click)="voltar()"><strong>Voltar</strong></ion-button>
+    </div>
+
+    <div class="button-container">
+      <ion-button class="submit-button" expand="block" (click)="registrar()"><strong>Cadastrar!</strong></ion-button>
+    </div>
+  </div>
+</ion-content>
+
+

@@ -1,0 +1,80 @@
+<ion-content class="ion-padding">
+  <div class="adoptions-container">
+    <img src="./assets/icon/logo3.png" alt="AdotaPet" class="logo">
+
+    <h1 class="adoptions-title"><strong>Minhas Adoções</strong></h1>
+
+    <ion-button expand="block" class="schedule-button"><strong>Agendar</strong></ion-button>
+
+    <div class="section-title"><strong>Próximas adoções</strong></div>
+    <div class="adoption-card">
+      <img src="./assets/dog3.jpg" alt="Profile" class="profile-image">
+      <div class="adoption-info">
+        <h2>Caramelo</h2>
+        <p>Cachorro</p>
+        <p>03/03/2023</p>
+      </div>
+      <ion-button class="cancel-button">Cancelar</ion-button>
+    </div>
+
+    <div class="section-title"><strong>Adoções Realizadas</strong></div>
+    <div class="adoption-card">
+      <img src="./assets/dog1.jpg" alt="Profile" class="profile-image">
+      <div class="adoption-info">
+        <h2>Pretinho</h2>
+        <p>Cachorro</p>
+        <p>01/02/2022</p>
+      </div>
+      <ion-button class="adopted-button">Adotado</ion-button>
+    </div>
+
+    <div class="adoption-card">
+      <img src="./assets/cat.jpg" alt="Profile" class="profile-image">
+      <div class="adoption-info">
+        <h2>Snow</h2>
+        <p>Gato</p>
+        <p>09/08/2022</p>
+      </div>
+      <ion-button class="adopted-button">Adotado</ion-button>
+    </div>
+
+    <div class="adoption-card">
+      <img src="./assets/dog2.png" alt="Profile" class="profile-image">
+      <div class="adoption-info">
+        <h2>Lino</h2>
+        <p>Cachorro</p>
+        <p>07/10/2022</p>
+      </div>
+      <ion-button class="adopted-button">Adotado</ion-button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <ion-footer class="footer">
+    <ion-toolbar class="footer-toolbar">
+      <ion-tabs>
+        <ion-tab-bar slot="bottom" class="footer-tab-bar">
+          <ion-tab-button tab="inicio" (click)="bemvindo()">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Início</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="consultas" (click)="adocoes()">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Consultas</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="explorar" (click)="buscar()">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Adotar</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="perfil"  (click)="perfil()">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

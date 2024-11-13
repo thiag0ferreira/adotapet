@@ -1,0 +1,54 @@
+<ion-content class="ion-padding">
+  <div class="profile-container">
+
+    <img src="./assets/icon/logo3.png" alt="AdotaPet">
+    <h1 class="profile-title"><strong>Meu perfil</strong></h1>
+    <img src="./assets/images.png" alt="Profile" class="profile-image">
+
+    <div class="personal-info">
+      <h2>Informações pessoais</h2>
+      <p>Joana Magalhães Souza</p>
+      <p>28/05/1990</p>
+      <p>Recife - PE</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="preferences">
+      <h2>Preferências</h2>
+      <ul>
+        <li>Gatos</li>
+        <li>Caramelo</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <ion-footer class="footer">
+    <ion-toolbar class="footer-toolbar">
+      <ion-tabs>
+        <ion-tab-bar slot="bottom" class="footer-tab-bar">
+          <ion-tab-button tab="inicio" (click)="bemvindo()">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Início</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="consultas" (click)="adocoes()">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Consultas</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="explorar" (click)="buscar()">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Adotar</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="perfil"  (click)="perfil()">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
